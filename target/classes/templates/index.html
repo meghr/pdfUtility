@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Utility Tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .tool-card {
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+        .container {
+            padding-top: 50px;
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .progress {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">File Utility Tools</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <!-- Image Compression -->
+            <div class="col-md-6">
+                <div class="card tool-card">
+                    <div class="card-header">Image Compression</div>
+                    <div class="card-body">
+                        <form id="compressionForm">
+                            <div class="mb-3">
+                                <label class="form-label">Select Image</label>
+                                <input type="file" class="form-control" accept="image/*" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Quality (0.1 - 1.0)</label>
+                                <input type="number" class="form-control" value="0.8" min="0.1" max="1.0" step="0.1" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Compress</button>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PDF Merger -->
+            <div class="col-md-6">
+                <div class="card tool-card">
+                    <div class="card-header">PDF Merger</div>
+                    <div class="card-body">
+                        <form id="mergerForm">
+                            <div class="mb-3">
+                                <label class="form-label">Select PDFs</label>
+                                <input type="file" class="form-control" accept=".pdf" multiple required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Merge PDFs</button>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PDF Password Unlocker -->
+            <div class="col-md-6">
+                <div class="card tool-card">
+                    <div class="card-header">PDF Password Unlocker</div>
+                    <div class="card-body">
+                        <form id="unlockForm">
+                            <div class="mb-3">
+                                <label class="form-label">Select PDF</label>
+                                <input type="file" class="form-control" accept=".pdf" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Unlock PDF</button>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image to PDF -->
+            <div class="col-md-6">
+                <div class="card tool-card">
+                    <div class="card-header">Image to PDF</div>
+                    <div class="card-body">
+                        <form id="imageToPdfForm">
+                            <div class="mb-3">
+                                <label class="form-label">Select Image</label>
+                                <input type="file" class="form-control" accept="image/*" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Convert to PDF</button>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

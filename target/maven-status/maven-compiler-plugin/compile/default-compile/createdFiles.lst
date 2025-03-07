@@ -1,0 +1,3 @@
+com\fileutils\FileUtilityApplication.class
+com\fileutils\controller\FileController.class
+com\fileutils\service\FileService.class
